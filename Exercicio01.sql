@@ -24,7 +24,14 @@ select * from livros where Ano_publicacao = 2018;
 select * from livros where preco = 60.00 >= 100.00;
 select * from livros where quantidade_estoque < 10;
 
+SET SQL_SAFE_UPDATES = 0;
+update livros set preco = 80.00 where titulo='SQL para iniciantes';
+update livros set quantidade_estoque = 15 where titulo='Introdução ao SQL';
 
+delete from livros where titulo='Mastering SQL';
+
+select sum(preco) as preco_total from livros;
+select max(preco) as preco_total from livros;
 
 
 
